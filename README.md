@@ -9,7 +9,7 @@ This repository contains code for automatically extracting archaeological catalo
 The archaeological catalog collection method leverages state-of-the-art vision-language models to:
 
 - Detect and localize artifacts in catalog images
-- Extract catalog metadata (dimensions, material, time period, etc.)
+- Extract catalog metadata
 - Generate structured output for archaeological research
 
 For technical details, please refer to [our paper](https://arxiv.org/pdf/2412.20088).
