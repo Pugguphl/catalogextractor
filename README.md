@@ -1,3 +1,21 @@
+# Archaeological Catalog Collection Method Based on Large Vision-Language Models
+
+[![arXiv](https://img.shields.io/badge/arXiv-2412.20088-b31b1b.svg)](https://arxiv.org/pdf/2412.20088)
+
+This repository contains code for automatically extracting archaeological catalog information using computer vision and large language models. The method processes images of pottery and other archaeological artifacts to extract structured data for analysis and documentation.
+
+## Overview
+
+The archaeological catalog collection method leverages state-of-the-art vision-language models to:
+
+- Detect and localize artifacts in catalog images
+- Extract catalog metadata (dimensions, material, time period, etc.)
+- Generate structured output for archaeological research
+
+For technical details, please refer to [our paper](https://arxiv.org/pdf/2412.20088).
+
+
+
 **Installation: pdfextractor**
 1. Clone the package repository and navigate to the pdfextractor directory.
 
