@@ -26,7 +26,7 @@ HEADERS = {
     "Content-Type": "application/json",
     # "api-key": "155966a08ac9403795b726df61bf5d65"
     # "Authorization":"Bearer sk-t4cK0u91BuiLNIDbs4YuOWQ0RvSzDuoxk4CVGfPsyhWxBycq"
-    "Authorization":"Bearer sk-t4cK0u91BuiLNIDbs4YuOWQ0RvSzDuoxk4CVGfPsyhWxBycq"
+    "Authorization":""
 }
 GPT_TURBO_URL="https://api.chatanywhere.com.cn/v1/chat/completions"
 
