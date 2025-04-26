@@ -226,7 +226,6 @@ for s in tqdm(range(len(all_images_name))):
     name=all_images_name[s]
     error_list = []
     IMAGE_PATH = os.path.join(base_dir,name)
-    # IMAGE_PATH =r'D:\BaiduNetdiskDownload\大坝沟和庙子沟数据集陶器图片\大坝沟Ⅰ\121.png'
     # 加载原始图像和处理后的图像
     image_source, image = load_image(IMAGE_PATH)
 
@@ -491,7 +490,7 @@ for s in tqdm(range(len(all_images_name))):
             info=text_this_index[pair[1]]
             class_name=info['class']
             item=info['item']
-            path=os.path.join(args.output_dir,item,class_name)
+            path=os.path.join(args.output_dir,os.path.basename(IMAGE_PATH).split('.')[0],item,class_name)
             image_name=class_name+'_'+item+'_'+str(num)+'.png'
 
             # 如果目录不存在，则创建
@@ -502,7 +501,7 @@ for s in tqdm(range(len(all_images_name))):
 
 
     # Create error file path using the command line argument
-    error_path = os.path.join(args.output_dir, "error_list_" + os.path.basename(IMAGE_PATH).split('.')[0] + '.txt')
+    error_path = os.path.join(args.output_dir,os.path.basename(IMAGE_PATH).split('.')[0], "error_list_" + os.path.basename(IMAGE_PATH).split('.')[0] + '.txt')
     # Create directory for error file if it doesn't exist
     error_dir = os.path.dirname(error_path)
     if not os.path.exists(error_dir):
