@@ -112,3 +112,50 @@ python pottery_info_extractor.py --output_dir /path/to/output/directory --image_
 ```bash
 python pottery_info_extractor.py --output_dir ./results --image_dir ./pottery_catalog_images --config_gd GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py --pretrained_weight_gd GroundingDINO/weights/groundingdino_swint_ogc.pth
 ```
+
+## 输出结果说明
+
+程序运行后，将在指定的输出目录中生成结构化的结果文件夹。输出结构如下：
+
+```
+输出目录/
+├── 图片名1/
+│   ├── 发掘单位名1/
+│   │   ├── 器物类型1/
+│   │   │   ├── 编号1.png
+│   │   │   ├── 编号2.png
+│   │   │   └── ...
+│   │   └── 器物类型2/
+│   │       └── ...
+│   ├── 发掘单位名2/
+│   │   └── ...
+│   └── error_list_图片名1.txt
+├── 图片名2/
+│   └── ...
+└── ...
+```
+
+### 示例
+
+以下是一个输出目录示例：
+
+```
+D:\PycharmProjects\sketch_Seg\vlm_collection\output\
+└── IF1 IF2 IH1\
+    └── QDIF1\
+        └── 敞口折腹钵\
+            ├── 001.png
+            ├── 002.png
+            └── ...
+```
+
+### 错误记录
+
+在每个图片名文件夹中，会生成一个名为 `error_list_图片名.txt` 的文件，记录处理过程中可能出现问题的器物编号。您可以根据这些错误信息进行人工检查和调整。
+
+错误文件包含:
+- 未能正确识别的器物编号
+- 图像模糊或信息不全的器物
+- 分类或提取过程中出现异常的器物
+
+建议定期检查这些错误文件，以确保数据提取的准确性和完整性。
